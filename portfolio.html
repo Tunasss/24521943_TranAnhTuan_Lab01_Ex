@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Jane Doe — Developer Portfolio</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+  <section class="hero">
+    <img
+      src="portrait.jpg"
+      alt="Portrait of Jane Doe"
+      width="200"
+      height="200"
+      loading="eager"
+    >
+    <h1>Jane Doe</h1>
+    <p class="pitch">Frontend engineer building fast, accessible web experiences.</p>
+    <button
+      id="theme-toggle"
+      aria-pressed="false"
+      aria-label="Toggle dark mode"
+    >
+      🌙
+    </button>
+  </section>
+
+  <section class="skills-matrix">
+    <h2>Skills</h2>
+    <div class="skills-grid">
+      <span class="badge" data-category="frontend">React</span>
+      <span class="badge" data-category="frontend">TypeScript</span>
+      <span class="badge" data-category="backend">Node.js</span>
+      <span class="badge" data-category="tools">Git</span>
+    </div>
+  </section>
+
+  <section class="projects">
+    <h2>Projects</h2>
+    <div class="projects-grid">
+      <article class="project-card" data-category="frontend">
+        <header class="card-header">
+          <h3>Distributed State Engine</h3>
+          <span class="badge">TypeScript</span>
+        </header>
+        <p>Lightweight event bus built without external libraries.</p>
+        <footer class="card-footer">
+          <a href="#" aria-label="View State Engine repository">Source Code</a>
+        </footer>
+      </article>
+    </div>
+  </section>
+
+  <section class="contact-form">
+    <h2>Contact Me</h2>
+    <form id="contact-form" novalidate>
+      <label for="name">Name</label>
+      <input type="text" id="name" name="name" required minlength="2">
+
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required>
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" required minlength="10"></textarea>
+
+      <button type="submit">Send</button>
+      <p id="form-status" role="status" aria-live="polite"></p>
+    </form>
+  </section>
+
+  <script src="theme.js"></script>
+</body>
+</html>
