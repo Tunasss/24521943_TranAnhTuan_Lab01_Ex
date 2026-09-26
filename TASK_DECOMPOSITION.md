@@ -56,3 +56,28 @@ meeting strict performance and accessibility acceptance criteria.
 ### Verification
 Chrome DevTools → Lighthouse (Performance + Accessibility) +
 manual keyboard-navigation + responsive check at 375px.
+
+## T-03: Resilient Component Architecture
+
+### Goal
+Build a single data-driven component (e.g. a "Projects" list) that
+correctly handles all 4 UI states: loading, loaded, empty, error.
+
+### State Machine
+- [ ] STATE 1: loading  -> shows skeleton shimmer placeholders
+- [ ] STATE 2: loaded   -> shows real data (flexbox badges + grid list)
+- [ ] STATE 3: empty    -> shows "no data" message, no skeleton, no error
+- [ ] STATE 4: error    -> shows error message + accessible retry button
+
+### Sub-tasks (each = separate commit)
+- [ ] T-03A — Loading Skeleton (pure CSS shimmer gradient)
+      git commit -m 'feat(css): skeleton'
+- [ ] T-03B — Live Data State (flexbox metadata badges & grid list)
+      git commit -m 'feat(css): live data state'
+- [ ] T-03C — Empty & Error States (accessible retry trigger)
+      git commit -m 'feat(js): empty & error states'
+
+### Constraints
+- [ ] Each state prompted/built separately — never generate all 4 in one AI prompt
+- [ ] Each state committed individually (no combined commits)
+- [ ] Retry trigger must be keyboard-accessible (a real <button>, not a div/span)
