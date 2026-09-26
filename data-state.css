@@ -1,0 +1,10 @@
+.metadata-badges {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.data-list {
+  display: grid;
+  gap: 0.75rem;
+}
